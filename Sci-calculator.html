@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scientific calculator</title>
+        <style>
+            body{
+    padding: 20px 0px;
+    margin: 0;
+    background: radial-gradient(#1e8fa5, black)no-repeat fixed;
+}
+
+button.clear{
+    background: #FF5722;
+    color: #fff;
+}
+button.clear:hover{ box-shadow: 0 0 27px #1ed50a;}
+
+table{
+        padding: 7px 5px;
+        background: black;
+        border-radius: 10px;
+        text-align: center;
+        padding-bottom: 0px;
+        box-shadow: 0 0 27px #0686a9;
+        margin-top:10px ;
+}
+button.equal{
+    width: 88%;
+   background: #210b04;
+}
+button.equal:hover{
+    background: #000803;
+    box-shadow: 0 0 27px #0686a9;
+}
+input[type="text"]{
+    width: 500px;
+    height: 85px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    font-size: 50px;
+    color: #dedede;
+    background: black;
+    font-weight: bolder;
+    margin-bottom: 25px;
+    font-family: cursive;
+    margin-top: 20px;
+    border-bottom: 2px solid blue;
+}
+button{
+    padding: 10px 20px;
+    width: 100px;
+    height: 60px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: cursive;
+    background: #000803;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover{
+    background: #210b04;
+}
+button.btn:hover{
+    background: #000803;
+    box-shadow: 0 0 27px #0686a9;
+}
+button.aa:hover{
+    color: aliceblue;
+    background: black;
+    box-shadow: 10px 1px 27px #eadb0b;
+}
+        </style>
+</head>
+<body>
+<form name="calculator">
+    <table align="center">
+        <tr>
+            <td colspan="4"><input type="text" name="result" placeholder="SILENT ACHIEVER" style="text-align: left;"></td>
+
+        </tr>
+        <tr>
+            <td><button type="button" value="sin" onclick="sin()" class="aa">sin</button></td>
+            <td><button type="button" value="cos" onclick="cos()" class="aa">cos</button></td>
+            <td><button type="button" value="tan" onclick="tan()" class="aa">tan</button></td>
+            <td colspan="2"><button type="button" onclick="remv()" class="clear">CE</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="x^2" onclick="square()" class="clear">x<sup>2</sup></button></td>
+            <td><button type="button" value="x^3" onclick="qubbed()" class="clear">x<sup>3</button></td>
+            <td><button type="button" value="sqrt2" onclick="sqrt2()" class="clear">&radic;</button></td>
+            <td><button type="button" value="sqrt3" onclick="sqrt3()" class="clear">&#8731;</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="1" onclick="number(value)" class="btn">1</button></td>
+            <td><button type="button" value="2" onclick="number(value)" class="btn">2</button></td>
+            <td><button type="button" value="3" onclick="number(value)" class="btn">3</button></td>
+            <td><button type="button" value="BACKSPC" onclick="BACKSPC()" class="clear">DEL</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="4" onclick="number(value)" class="btn">4</button></td>
+            <td><button type="button" value="5" onclick="number(value)" class="btn">5</button></td>
+            <td><button type="button" value="6" onclick="number(value)" class="btn">6</button></td>
+            <td><button type="button" value="-" onclick="number(value)" class="btn">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="7" onclick="number(value)" class="btn">7</button></td>
+            <td><button type="button" value="8" onclick="number(value)" class="btn">8</button></td>
+            <td><button type="button" value="9" onclick="number(value)" class="btn">9</button></td>
+            <td><button type="button" value="/" onclick="number(value)" class="btn">/</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" value="." onclick="number(value)" class="btn">.</button></td>
+            <td><button type="button" value="0" onclick="number(value)" class="btn">0</button></td>
+            <td><button type="button" value="*" onclick="number(value)" class="btn">*</button></td>
+            <td><button type="button" value="%" onclick="number(value)" class="btn">%</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" value="=" onclick="equal()" class="equal">=</button></td>
+            <td colspan="2"><button type="button" value="+" onclick="number(value)" class="equal">+</button></td>
+           </tr>
+    </table>
+</form>
+<script type="text/javascript">
+    function sin(){
+        document.calculator.result.value=Math.sin(document.calculator.result.value);
+    }
+    function cos(){
+        document.calculator.result.value=Math.cos(document.calculator.result.value);
+    }
+    function tan(){
+        document.calculator.result.value=Math.tan(document.calculator.result.value);
+    }
+    function BACKSPC(){
+        var a =  document.calculator.result.value;
+        document.calculator.result.value = a.substr(0, a.length-1);
+    }
+    function square(){
+        document.calculator.result.value = Math.pow(document.calculator.result.value, 2);
+    }
+    function qubbed(){
+        document.calculator.result.value = Math.pow(document.calculator.result.value, 3);
+    }
+    function sqrt2(){
+        document.calculator.result.value = Math.pow(document.calculator.result.value, 1/2);
+    }
+    function sqrt3(){
+        document.calculator.result.value = Math.pow(document.calculator.result.value, 1/3);
+    }
+    function number(value){
+        document.calculator.result.value += value;
+    }
+    function remv(){
+        document.calculator.result.value = " ";
+    }
+    function equal(){
+        document.calculator.result.value = eval(document.calculator.result.value);
+    }
+</script>
+</body>
+</html>
