@@ -2,8 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-     <title>My profetional site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>My professional site</title>
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
      <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         
         body {
                 background-image:url(bg2.jpg);
                 background-attachment: fixed;
@@ -16,15 +25,17 @@ hr{
   border-style:dotted none none;
   border-color: rgb(212, 14, 146);
   width: 10%;     
+  margin: 2px;
   border-width: 10px;
 }
 h1{
   color:#00ffff;
-  text-align: center;
+  text-align: left;
   margin-top: 50px;
   padding: 20px;
+  margin-left: 5px;
   font-size: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 h3{ 
@@ -47,6 +58,7 @@ footer{
   color: #00ffff;
 }
 p{
+  font-size: 25px;
     color: rgb(133, 96, 48);
 }
 li{
@@ -56,8 +68,9 @@ tr{
   color: rgb(17, 209, 14);
 }
 a{
+  font-size: 300px;
+  color: red;
 
-  position: right;
 }
 label{
   padding: 20px;
@@ -95,12 +108,15 @@ input{
   color: #00ffff;
 }
 .bb{
+  font-size: 25px;
   color:rgb(0, 85, 255);
 }
 .aa{
+  font-size: 30px;
   color: beige;
 }
 .pp{
+  font-size: 19px;
   text-decoration: none;
 }
 
@@ -110,84 +126,135 @@ text-decoration: underline;
 }
 
 .qqq{
- text-align: center;
-  
+ text-align: center; 
 }
-
+@keyframes afeex{
+            0%{
+               background-image: url(bg1.jpg);
+            }
+            10%{
+                background-image: url(./bg2.jpg);
+            }
+            40%{
+                background-image: url(./bg3.jpg);
+            }
+            70%{
+               background-image: url(./bg4.jpg);
+            }
+            90%{
+              background-image: url(./bg5.jpg);
+            }
+          }
+         .container{
+            height: 400px;
+            color: white;
+            font-size: 3rem;
+            width: 70%;
+            animation-name: afeex;
+            animation-duration: 6s ;
+            animation-iteration-count: infinite;
+        }
      </style>
      <link rel="icon" href="pexel.jpg" type="image/x-icon">
 </head>
 <body>
-    <table style="margin-top: 10%; margin-bottom: 10%;" align="center" class="head" cell-spacing="100">
+<div >
+
+  <table  style="margin-top: 10%; margin-bottom: 10%;" align="center" class="head" cell-spacing="100">
         <tr>
-            <td><img class="CIRCULAR" src="pexel.jpg" alt="My profile pic"></td>
-            <td><h1>Silent Achiever</h1>
-            <p><em>FOUNDER AND CEO <strong><a href="https://youtube.com/@viperfirepro?si=ExW5r4yvEcBcycRg">VIPERFIRE PRO</a></strong>.</em></p>
-            <p class="cake">I AM A WEB DEVELOPER. I LOVE CAKES.<br>
+            <td ><img data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine" class="CIRCULAR" src="pexel.jpg" alt="My profile pic"></td>
+            <td><h1 data-aos="fade-left">Silent Achiever</h1>
+            <p data-aos="fade-right"><em>FOUNDER AND CEO <strong><a href="https://youtube.com/@viperfirepro?si=ExW5r4yvEcBcycRg">VIPERFIRE PRO</a></strong>.</em></p>
+            <p data-aos="flip-right" class="cake">I AM A WEB DEVELOPER. I LOVE CAKES.<br>
             <marquee scrolldelay="100" >Subscribe to my channel on youtube</marquee>
             </p></td>
         </tr> 
     </table>    
-<hr>
-
-<h3>
+<hr data-aos="zoom-out-up">
+<div data-aos="zoom-in">
+<h3 data-aos="zoom-out-up">
 BOOKS & TEACHING
 </h3>
 <ul>
-<li class="bb">HTML complete tutorial</li>
-<li class="bb"> The complete web development</li>
+<li style="margin: 5px; font-size: 25px;" data-aos="fade-left" class="bb">HTML complete tutorial</li>
+<li style="margin: 5px; font-size: 25px;" data-aos="fade-right" class="bb"> The complete web development</li>
 </ul><hr>
-<h3>EDUCATION EXPERIENCE</h3>
-<table>
+<h3 data-aos="zoom-out-down">EDUCATION EXPERIENCE</h3>
+<table cell-spacing="10">
 <thead>
 <tr>
-    <th class="aa">Dates</th>
-    <th class="aa">Education</th>
+    <th data-aos="zoom-out-up" class="aa">Dates</th>
+    <th data-aos="zoom-out-up" class="aa">Education</th>
 </tr>
 </thead>
 <tbody>
+</div>
+    <div data-aos="fade-down-right">
+        
     <tr>
-        <td class="bb">2014-2018</td>
-        <td class="bb">Primary School Education</td>
+        <td data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="bb">2014-2018</td>
+        <td data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="bb">Primary School Education</td>
     </tr>
     <tr>
-        <td class="bb">2019-2024</td>
-    <td class="bb">Secondary School Education</td>
+        <td data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-out-sine"class="bb">2019-2024</td>
+        <td data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-out-sine"class="bb">Secondary School Education</td>
     </tr>
     <tr>
-        <td class="bb">2024-2028</td>
-    <td class="bb">College Education</td>
+        <td data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="bb">2024-2028</td>
+        <td data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="bb">College Education</td>
     </tr>
 </tbody>
 
-</table><hr>
-<h3>SKILLS</h3>
+</table><hr data-aos="flip-left">
+<h3 data-aos="flip-left">SKILLS</h3>
 <table cell-spacing="10">
         <tr>
-        <td>CHESS</td>
-        <td>⭐⭐⭐⭐⭐</td>
+        <td style="font-size: 25px;" data-aos="flip-left">CHESS</td>
+        <td style="font-size: 25px;" data-aos="flip-right">⭐⭐⭐⭐⭐</td>
     </tr>
         <tr>
-        <td>
+        <td style="font-size: 25px;" data-aos="flip-left">
          GAMING
-        </td><td>⭐⭐⭐
+        </td><td style="font-size: 25px;" data-aos="flip-right">⭐⭐⭐
         </td>
         
         </tr>
 
     <tr>
-    <td>FOOTBALL</td>
-    <td>⭐⭐⭐⭐ </td>
-    </tr>  </table><hr>
+    <td style="font-size: 25px;" data-aos="flip-down">FOOTBALL</td>
+    <td style="font-size: 25px;" data-aos="flip-up">⭐⭐⭐⭐ </td>
+    </tr>  </table>
+    </div>
 <div class="work">
  <nav class="qqq">
-   <a class="pp" href="work.html">My Projects</a><br><br>
-     <a class="pp" href="contact me.html"> Contact Me</a>
+        <a data-aos="zoom-in" class="pp" href="work.html">My Projects</a><br><br>
+        <a class="pp" href="contact me.html"> Contact Me</a>
 
  </nav>  
 </div>
     <footer>
     ©copyright 2024 Abdullateef AbdulBasit
-  </footer>
+  </footer>  
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+        });
+      </script>
 </body>
 </html> 
